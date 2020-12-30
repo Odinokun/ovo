@@ -1,6 +1,10 @@
 .page-title {
   padding: 22px 0;
   background-color: #f5f8f7;
+
+  @include max(680) {
+    padding: 18px 0;
+  }
 }
 
 .page-title__title {

@@ -50,7 +50,11 @@ h6 {
 }
 
 p {
-  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0 0 18px 0;
+  color: #1d1d1b;
 
   strong {
     font-weight: 600;
@@ -70,13 +74,6 @@ ol,
 ul {
   li {
     padding: 0;
-  }
-}
-
-ul {
-  li {
-    // путь к кастомной картинке пункта ul
-    // list-style-image: url('../img/ul.png');
   }
 }
 
@@ -153,5 +150,71 @@ svg {
   }
   @include max(768) {
     padding: 0 16px;
+  }
+}
+
+.title-40,
+.title-32,
+.title-24 {
+  font-weight: 300;
+  color: #1d1d1b;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.title-40 {
+  line-height: 1.25;
+  margin-bottom: 20px;
+
+  @include responsive-font(40, 32);
+  @include max(680) {
+    margin-bottom: 16px;
+  }
+}
+
+.title-32 {
+  line-height: 1.33;
+  margin-bottom: 20px;
+
+  @include responsive-font(32, 24);
+  @include max(680) {
+    margin-bottom: 16px;
+  }
+}
+
+.title-24 {
+  @include responsive-font(24, 16);
+}
+
+.ul-list {
+  margin: 0;
+  padding: 0;
+
+  li {
+    position: relative;
+    margin-bottom: 22px;
+    padding-left: 64px;
+    list-style: none;
+
+    @include max(680) {
+      padding-left: 24px;
+    }
+
+    &::before {
+      position: absolute;
+      top: 2px;
+      left: 30px;
+      width: 16px;
+      height: 16px;
+      content: '';
+      border: 3px solid #adc9b8;
+      border-radius: 50%;
+
+      @include max(680) {
+        left: 0;
+      }
+    }
   }
 }
