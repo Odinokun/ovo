@@ -25,13 +25,27 @@ body {
   min-width: 320px;
 }
 
+
+h1 {
+  @include responsive-font(40, 32);
+}
+
+h2 {
+  @include responsive-font(32, 24);
+}
+
+h3 {
+  @include responsive-font(24, 16);
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 300;
+  line-height: 1;
   margin: 0 0 10px 0;
 }
 
@@ -45,6 +59,7 @@ p {
 
 a {
   text-decoration: underline;
+  color: $brand;
 
   &:hover {
     text-decoration: none;
@@ -118,7 +133,6 @@ svg {
   flex-direction: column;
   height: 100%;
   min-height: 100vh;
-  background-color: #ccc;
 
   -webkit-overflow-scrolling: touch;
 }
@@ -130,11 +144,14 @@ svg {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 0 48px;
 
-  @include max(1240) {
-    padding: 0 50px;
+  @include max(1024) {
+    padding: 0 32px;
+  }
+  @include max(768) {
+    padding: 0 16px;
   }
 }

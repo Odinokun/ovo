@@ -4,16 +4,27 @@
 @import 'core/base';
 
 //elements
-//@import 'elements/burger';
+@import 'elements/burger';
 //@import 'elements/breadcrumbs';
 //@import 'elements/pagination';
 //@import 'elements/popup';
-//@import 'elements/slickBase';
+@import 'elements/slickBase';
+
+//main section
+@import 'sections/header';
+@import 'sections/m-header';
+@import 'sections/underheader';
+@import 'sections/footer';
 
 //section
-@import 'sections/header';
-//@import 'sections/footer';
+@import 'sections/index-slider';
+@import 'sections/index-wants';
+@import 'sections/index-services';
+@import 'sections/index-map';
+@import 'sections/map-sm';
+@import 'sections/page-top-pic';
+@import 'sections/page-title';
 
 //pages
-@import 'pages/index';
+@import 'pages/first-visit';
 //@import 'pages/inner';

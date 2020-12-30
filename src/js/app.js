@@ -12,6 +12,9 @@ $(function() {
   // begin header search field
   require('./modules/header-search')();
 
+  // begin burger and mobile menu
+  require('./modules/burgerAndMenu')();
+
   // begin phone mask
   // require('./modules/maskedinput')();
 
@@ -19,14 +22,9 @@ $(function() {
   // require('./modules/scroll2ancor')();
 
   // begin Slick slider
-  // require('./modules/slick')();
+  require('./modules/slick')();
 
   // begin Popup
   // require('./modules/popup')();
-
-  // begin Animate.css
-  //РАБОТАЕТ ТОЛЬКО С JQUERY < 3.0.0 !!!!!!!!!!!!!!!!!!
-  // require('./modules/waypoints')();
-  // require('./modules/animateCss')();
 
 });

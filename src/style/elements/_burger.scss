@@ -1,59 +1,71 @@
-$burger-height: 17px;
-$burger-width: 24px;
-$burger-color: #fff;
-$burger-item: 3px;
-$burger-item-offset: $burger-height - $burger-item * 2;
-$burger-item-shadow: -1 * $burger-item - ($burger-item-offset - $burger-item) / 2;
-
 .burger {
   position: relative;
-  display: inline-flex;
+  z-index: 101;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+
+  @include max(1180) {
+    display: flex;
+  }
 }
 
-.burger__input {
+.burger__icon {
   position: absolute;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  display: block;
-  width: $burger-width;
-  height: $burger-height;
-  cursor: pointer;
-  opacity: 0;
-
-  &:checked + .burger__label::before {
-    transform: translateY($burger-height / 2 - $burger-item * .5) rotateZ(45deg);
-  }
-
-  &:checked + .burger__label::after {
-    transform: translateY($burger-height / 2 - $burger-item * 1.5) rotateZ(-45deg);
-
-    filter: initial;
-  }
-}
-
-.burger__label {
-  width: $burger-width;
-  height: $burger-height;
-  margin: auto;
-  cursor: pointer;
-  user-select: none;
-  color: $burger-color;
-  border-radius: $burger-item / 2;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 3px;
+  transition: all ease .5s;
+  transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  border-radius: 4px;
+  background-color: #1d1d1b;
 
   &::before,
   &::after {
-    display: block;
-    height: $burger-item;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    margin: auto;
     content: '';
-    transition: .5s;
+    transition: all ease .5s;
     border-radius: inherit;
-    background: $burger-color;
+    background-color: inherit;
+  }
+
+  &::before {
+    top: -7px;
+    left: 0;
+    transform-origin: left;
   }
 
   &::after {
-    transform: translateY($burger-item-offset);
+    right: 0;
+    bottom: -7px;
+    transform-origin: right;
+  }
 
-    filter: drop-shadow(0 $burger-item-shadow $burger-color);
+  &.active {
+    transform: translate(-50%, -50%) rotate(135deg);
+    background-color: #4a4a4a;
+
+    &::before {
+      top: 0;
+      width: 50%;
+      transform: translateX(100%) rotate(-90deg);
+    }
+
+    &::after {
+      bottom: 0;
+      width: 50%;
+      transform: translateX(-100%) rotate(-90deg);
+    }
   }
 }

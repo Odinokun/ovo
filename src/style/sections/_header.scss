@@ -1,6 +1,10 @@
 .header {
   background-color: $brand;
 
+  @include max(1180) {
+    display: none;
+  }
+
   .container {
     display: flex;
     align-items: center;
@@ -18,7 +22,12 @@
   display: flex;
   align-items: center;
   margin-right: 30px;
+  transition: opacity .5s;
   text-decoration: none;
+
+  &:hover {
+    opacity: .9;
+  }
 
   svg {
     flex: none;
@@ -49,14 +58,28 @@
 
 .header-menu__item {
   list-style: none;
+  transition: .5s;
+  background-color: transparent;
+
+  &.active {
+    pointer-events: none;
+    background-color: #296963;
+  }
+
+  &:hover {
+    background-color: #0a534c;
+  }
 }
 
 .header-menu__link {
   font-size: 14px;
   font-weight: 300;
-  line-height: 1.29;white-space: nowrap;
-  display: block;
+  line-height: 1.29;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
   padding: 0 12px;
+  white-space: nowrap;
   text-decoration: none;
   color: #fff;
 }
@@ -66,12 +89,13 @@
 //begin #ITEM
 .header-item {
   position: relative;
-  width: 100%;
+  display: flex;
   justify-content: flex-end;
-  padding-right: 60px;
-  display: flex;align-items: center;
+  align-items: center;
+  width: 100%;
   max-width: 305px;
   height: 48px;
+  padding-right: 60px;
 }
 
 //end #ITEM
@@ -88,7 +112,7 @@
   transition: .5s;
 
   &:hover {
-    opacity: .7;
+    opacity: .9;
   }
 
   svg {
@@ -101,32 +125,41 @@
 //end #SOCIALS
 
 //begin #USER
-.header-user{
+.header-user {
+  display: flex;
+  align-items: center;
   margin-left: 15px;
-  display: flex;align-items: center;
+  transition: opacity .5s;
+
+  &:hover {
+    opacity: .9;
+  }
+
   svg {
+    flex: none;
+    fill: #fff;
     width: 16px;
     height: 16px;
-    fill:#fff;
-    margin-right: 8px;flex: none;
+    margin-right: 8px;
   }
+
   span {
     font-size: 14px;
     line-height: 1;
-    color: #ffffff;
     white-space: nowrap;
-
+    color: #fff;
   }
 }
+
 //end #USER
 
 //begin #SEARCH
 .header-search {
-  height: 48px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 48px;
   transition: opacity .5s;
   pointer-events: none;
   opacity: 0;
@@ -249,13 +282,9 @@
   background-color: #ebf1ef;
 
   &.active {
+    order: -1;
     opacity: 1;
     background-color: transparent;
-  }
-
-
-  &.active {
-    order: -1;
 
     .header-langs__link {
       color: #fff;

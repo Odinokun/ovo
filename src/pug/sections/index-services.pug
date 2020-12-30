@@ -1,0 +1,17 @@
+mixin index-services__link(title, descr)
+  //begin index-services__link
+  a(href="#").index-services__link
+    h3.index-services__title #{title}
+    span.index-services__descr #{descr}
+  //end index-services__link
+
+//begin index-services
+.index-services
+  .container
+    .index-services__row
+      +index-services__link('Заплідення In Vitro', 'Жодних припущень чи ворожінь на кавовій гущі. Тільки сучасні  діагностичні методи репродуктивного здоров\'я')
+      +index-services__link('Жіноча консультація', 'Експерти з лікування безпліддя: лікарі, ембріологи та асистенти')
+    .index-services__row
+      +index-services__link('Ведення Вагітності', 'Тільки ефективні та дієві методи відновлення фертильності. Відповідно до актуальних европейських  протоколів та стандартів. ')
+      +index-services__link('Операційні втручання', 'Кожна мрія має ціну, але бітьківство - безцінне!')
+//end index-services

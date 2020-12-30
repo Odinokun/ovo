@@ -1,67 +1,76 @@
-//begin header
-.header#header
+//begin m-header
+.m-header#m-header
   .container
-    //begin header__contacts
-    .header__contacts.header-contacts
-      a(href="tel:+0971621688").header-contacts__link
-        +svg('smart')
-        span 097 16 216 88
-      a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").header-contacts__link
-        +svg('marker')
-        span Як нас знайти
-    //end header__contacts
+    //begin header__logo
+    a(href="/").header__logo
+      +svg('logo-header')
+    //end header__logo
 
-    //begin header__menu
-    nav.header__menu.header-menu
-      ul.header-menu__list
-        li.header-menu__item
-          a(href="#").header-menu__link Про нас
-        li.header-menu__item
-          a(href="#").header-menu__link Медична команда
-        li.header-menu__item
-          a(href="#").header-menu__link Відгуки
-        li.header-menu__item
-          a(href="#").header-menu__link Блог
-    //end header__menu
+    include ../elements/burger
 
-    //begin header__item
-    .header__item.header-item
-      //begin header__socials
-      .header__socials.header-socials
-        a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-socials__link
-          +svg('fb')
-        a(href="#" target="_blank" rel="nofollow noopener noreferrer").header-socials__link
-          +svg('inst')
-      //end header__socials
+    //begin m-header__menu
+    .m-header__menu.m-header-menu#m-header__menu
+      .m-header__menu-inn
+        //begin m-header-menu__list
+        ul.m-header-menu__list
+          li.m-header-menu__item
+            a(href="#").m-header-menu__link Про нас
+          li.m-header-menu__item
+            a(href="#").m-header-menu__link Медична команда
+          li.m-header-menu__item
+            a(href="#").m-header-menu__link.active Репродуктивне здоров'я
+          li.m-header-menu__item
+            a(href="#").m-header-menu__link Діагностика
+          li.m-header-menu__item
+            a(href="#").m-header-menu__link Лікування
+          li.m-header-menu__item
+            a(href="#").m-header-menu__link Ціни
+          li.m-header-menu__item
+            a(href="#").m-header-menu__link Відгуки
+          li.m-header-menu__item
+            a(href="#").m-header-menu__link Блог
+        //end m-header-menu__list
 
-      //begin header__user
-      .header__user.header-user
-        +svg('user')
-        span Моя медична карта
-      //end header__user
+        //begin m-header__user
+        .m-header__user.m-header-user
+          +svg('user')
+          span Моя медична карта
+        //end m-header__user
 
-      //begin header__search
-      form.header__search.header-search
-        input(placeholder='Введіть пошуковий запит').header-search__input
-        button.header-search__btn
-          +svg('search')
-      //end header__search
+        //begin m-header__contacts
+        .m-header__contacts.m-header-contacts
+          a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").m-header-contacts__link.m-header-contacts__link--adress
+            +svg('marker')
+            span Як нас знайти
+          a(href="tel:+380971621688").m-header-contacts__link
+            +svg('smart')
+            span 097 16 216 88
+        //end m-header__contacts
 
-      .header__search-open
-        +svg('search')
-    //end header__item
+        //begin m-header__langs
+        .m-header__langs.m-header-langs
+          ul.m-header-langs__list
+            li.m-header-langs__item.active
+              a(href="#").m-header-langs__link Укр
+            li.m-header-langs__item
+              a(href="#").m-header-langs__link Рус
+            li.m-header-langs__item
+              a(href="#").m-header-langs__link Eng
+        //end m-header__langs
 
+        //begin m-header__socials
+        .m-header__socials.m-header-socials
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").m-header-socials__link
+            +svg('fb')
+          a(href="#" target="_blank" rel="nofollow noopener noreferrer").m-header-socials__link
+            +svg('inst')
+        //end m-header__socials
 
-    //begin header__langs
-    .header__langs.header-langs
-      ul.header-langs__list
-        li.header-langs__item.active
-          a(href="#").header-langs__link Укр
-        li.header-langs__item
-          a(href="#").header-langs__link Рус
-        li.header-langs__item
-          a(href="#").header-langs__link Eng
-      .header-langs__icon
-        +svg('arr-down')
-    //end header__langs
-//end header
+        //begin m-header__search
+        form.m-header__search.m-header-search
+          input(placeholder='Пошук').m-header-search__input
+          button.m-header-search__btn
+            +svg('search')
+        //end m-header__search
+    //end m-header__menu
+//end m-header

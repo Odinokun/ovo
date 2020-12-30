@@ -1,5 +1,8 @@
 extends ../_template
 
+block variables
+  - var pageTitle = 'Перший візит'
+
 block content
   .main-wrap.no-js
     include ../sections/header
@@ -8,10 +11,11 @@ block content
 
     //begin content
     main.main
-      include ../sections/index-slider
-      include ../sections/index-wants
-      include ../sections/index-services
-      include ../sections/index-map
+      include ../sections/page-top-pic
+      include ../sections/page-title
+
+
+      include ../sections/map-sm
     //end content
 
     include ../sections/footer
@@ -19,22 +23,15 @@ block content
     script.
       function initMap() {
         let windowWidth = document.documentElement.clientWidth;
-        let myLatLng;
-        let markerLatLng = {lat: 49.7946105662072, lng: 24.05389071216973};
+        let myLatLng = {lat: 49.7946105662072, lng: 24.05389071216973};
 
-        if (windowWidth > 640){
-          myLatLng = {lat: 49.7946105662072, lng: 24.05389071216973};
-        } else {
-          myLatLng = {lat: 49.7959, lng: 24.05389071216973};
-        }
-
-        let map = new google.maps.Map(document.getElementById('map'), {
+        let map = new google.maps.Map(document.getElementById('map-sm'), {
           zoom: 17,
           center: myLatLng,
           styles: []
         });
         let marker = new google.maps.Marker({
-          position: markerLatLng,
+          position: myLatLng,
           map: map,
           title: 'Ovo',
           icon: 'assets/img/marker.svg'
