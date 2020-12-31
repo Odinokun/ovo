@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  background-color: #fafbfb;
 
   @include max(1023) {
     background-color: #f5f7f7;
