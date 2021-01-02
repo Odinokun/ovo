@@ -78,9 +78,21 @@
   @include max(640) {
     flex-direction: column;
   }
+}
 
-  &:last-child {
-    margin-bottom: 0;
+.footer-left__links--row {
+  @include max(640) {
+    flex-direction: row;
+
+    .footer-left__link {
+      &:first-child {
+        padding-right: 24px;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
