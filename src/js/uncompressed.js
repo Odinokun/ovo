@@ -8,6 +8,7 @@ $(document).ready(function ($) {
     'reviews',
     'contacts',
     'register',
+    'search',
     ]);
 });
 
