@@ -9,6 +9,7 @@ $(document).ready(function ($) {
     'contacts',
     'register',
     'search',
+    'about',
     ]);
 });
 
