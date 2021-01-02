@@ -7,6 +7,7 @@ $(document).ready(function ($) {
     'first-visit',
     'reviews',
     'contacts',
+    'register',
     ]);
 });
 

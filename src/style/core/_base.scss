@@ -86,7 +86,6 @@ ol {
   }
 }
 
-input,
 textarea,
 select,
 button {
@@ -95,11 +94,30 @@ button {
 }
 
 input {
-  padding: 3px 10px 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  display: block;
+  height: 48px;
+  margin-bottom: 16px;
+  padding: 7px 24px 5px 24px;
+  transition: .5s;
   color: $text;
-  border: 1px solid $text;
+  border: solid 1px #d1d1d1;
+  border-radius: 25px !important;
+  outline: none !important;
+  background-color: transparent;
 
-  @include placeholder-color($text);
+  @include placeholder-color(#d1d1d1);
+
+  &:hover {
+    border: 1px solid #adc9b8;
+  }
+
+  &:focus {
+    border: 1px solid #004c45;
+  }
 }
 
 textarea {
@@ -115,13 +133,6 @@ textarea.error {
 svg {
   display: block;
   overflow: visible;
-}
-
-//изменяем цвет выделения текста мышью
-::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
 }
 
 .main-wrap {
@@ -216,5 +227,33 @@ svg {
         left: 0;
       }
     }
+  }
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  margin-bottom: 16px;
+  padding: 0 24px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color .5s;
+  white-space: nowrap;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 25px !important;
+  background-color: #004c45;
+  box-shadow: none;
+
+  &:hover {
+    color: #fff;
+    background-color: #0a534c;
   }
 }
