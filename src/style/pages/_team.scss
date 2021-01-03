@@ -1,0 +1,184 @@
+.team-menu {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 48px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  width: calc(100% - 32px);
+  max-width: 352px;
+  margin: 0;
+  padding: 0;
+  transition: background-color .5s;
+  transform: translateY(-70px);
+  border-radius: 24px;
+  background-color: transparent;
+
+  @include max(1024) {
+    right: 32px;
+  }
+  @include max(768) {
+    right: 16px;
+  }
+  @include max(767) {
+    top: 8px;
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  &::before {
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    width: 8px;
+    height: 8px;
+    content: '';
+    transform: rotate(-45deg);
+    pointer-events: none;
+    border-bottom: 2px solid $text;
+    border-left: 2px solid $text;
+  }
+
+  &.open {
+    background-color: #ebf1ef;
+
+    .team-menu__item {
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.team-menu__item {
+  display: flex;
+  min-height: 46px;
+  list-style: none;
+  cursor: pointer;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.team-menu__item.active {
+  order: -5;
+  min-height: 48px;
+  margin-bottom: 5px;
+  pointer-events: auto;
+  opacity: 1;
+
+  .team-menu__link {
+    //font-size: 24px;
+    pointer-events: none;
+    color: $text;
+    background-color: #e2ebe9;
+  }
+}
+
+.team-menu__link {
+  font-size: 20px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 50px 2px 24px;
+  user-select: none;
+  transition: background-color .5s;
+  text-decoration: none;
+  color: #1d1d1b;
+  border-radius: 24px;
+  background-color: transparent;
+
+  @include max(767) {
+    padding: 0 40px 2px 16px;
+  }
+
+  &:hover {
+    background-color: #e4ebea;
+  }
+}
+
+//begin #DOCTORS
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 32px);
+  margin: 38px 0 0 0;
+  padding: 0;
+  transform: translateX(-16px);
+
+  @include max(767) {
+    margin: 74px 0 0 0;
+  }
+  @include max(540) {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+.team-list__item {
+  display: block;
+  width: 33.33%;
+  margin-bottom: 96px;
+  padding: 0 16px;
+  list-style: none;
+
+  @include max(900) {
+    width: 50%;
+    margin-bottom: 64px;
+  }
+  @include max(540) {
+    width: 100%;
+    margin-bottom: 48px;
+    padding: 0;
+  }
+}
+
+.team-list__link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    .team-list__name {
+      color: #004c45;
+    }
+
+    .team-list__position {
+      color: #8aaca9;
+    }
+  }
+}
+
+.team-list__ava {
+  overflow: hidden;
+  width: 90%;
+  max-width: 254px;
+  margin-bottom: 24px;
+  border-radius: 50%;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.team-list__name {
+  margin-bottom: 10px;
+  transition: color .5s;
+}
+
+.team-list__position {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  transition: color .5s;
+  text-align: center;
+  color: #aaa;
+}
+
+//end #DOCTORS

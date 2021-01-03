@@ -15,6 +15,9 @@ $(function() {
   // begin burger and mobile menu
   require('./modules/burgerAndMenu')();
 
+  // begin team filter
+  require('./modules/teamFilter')();
+
   // begin phone mask
   // require('./modules/maskedinput')();
 

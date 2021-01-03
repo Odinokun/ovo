@@ -10,7 +10,8 @@ $(document).ready(function ($) {
     'register',
     'search',
     'about',
-    ]);
+    'team',
+  ]);
 });
 
 function pageWidget(pages) {
