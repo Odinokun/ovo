@@ -1,0 +1,72 @@
+extends ../_template
+
+block variables
+  - var pageTitle = 'Блог'
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/header-mob
+    include ../sections/underheader
+
+    //begin content
+    main.main.blog
+      include ../sections/page-top-pic--team
+      include ../sections/page-title
+
+      .container
+        //begin blog__switcher
+        .blog__switcher.blog-switcher
+          label.blog-switcher__btn
+            input(type='checkbox' checked)
+            span Відео
+          label.blog-switcher__btn
+            input(type='checkbox')
+            span Статті
+        //end blog__switcher
+
+        //begin blog__list
+        .blog__list
+          //begin blog__item
+          .blog__item.blog-item
+            a(href="#").blog-item__title Відкладене материнство
+            .blog-item__descr
+              a(href="#").blog-item__pic
+                img(src="assets/img/blog-01.jpg" alt="picture")
+              a(href="#").blog-item__text Після 35 років власні репродуктивні резерви жінки поступово зменшуються. Сучасна методика відкладеного материнства надає можливість призупинити біологічний годинник та запланувати народження дитини в більш пізньому віці.
+          //end blog__item
+
+          //begin blog__item
+          .blog__item.blog-item
+            a(href="https://youtu.be/XmtXC_n6X6Q?t=452" data-fancybox).blog-item__title Сучасні технології, які рятують репродуктивне здоров’я
+            .blog-item__descr
+              a(href="https://youtu.be/XmtXC_n6X6Q?t=452" data-fancybox).blog-item__pic.blog-item__pic--video
+                img(src="assets/img/blog-02.jpg" alt="picture")
+              a(href="https://youtu.be/XmtXC_n6X6Q?t=452" data-fancybox).blog-item__text Реальність сувора: близько 20% пар в Україні та світі не можуть стати батьками за станом репродуктивного здоров’я. Але сьогодні безпліддя – це не вирок, переважну більшість проблем можна вирішити допоміжними репродуктивними технологіями. Далі про те, як це працює.
+          //end blog__item
+
+          //begin blog__item
+          .blog__item.blog-item
+            a(href="#").blog-item__title У кожної пари свій шлях
+            .blog-item__descr
+              a(href="#").blog-item__pic
+                img(src="assets/img/blog-03.jpg" alt="picture")
+              a(href="#").blog-item__text Реальність сувора: близько 20% пар в Україні та світі не можуть стати батьками за станом репродуктивного здоров’я. Але сьогодні безпліддя – це не вирок, переважну більшість проблем можна вирішити допоміжними репродуктивними технологіями. Далі про те, як це працює.
+          //end blog__item
+
+          //begin blog__item
+          .blog__item.blog-item
+            a(href="https://youtu.be/XmtXC_n6X6Q?t=452" data-fancybox).blog-item__title Сучасні технології, які рятують репродуктивне здоров’я
+            .blog-item__descr
+              a(href="https://youtu.be/XmtXC_n6X6Q?t=452" data-fancybox).blog-item__pic.blog-item__pic--video
+                img(src="assets/img/blog-04.jpg" alt="picture")
+              a(href="https://youtu.be/XmtXC_n6X6Q?t=452" data-fancybox).blog-item__text Реальність сувора: близько 20% пар в Україні та світі не можуть стати батьками за станом репродуктивного здоров’я. Але сьогодні безпліддя – це не вирок, переважну більшість проблем можна вирішити допоміжними репродуктивними технологіями. Далі про те, як це працює.
+          //end blog__item
+        //end blog__list
+
+
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

@@ -9,7 +9,7 @@
   width: calc(100% - 32px);
   max-width: 352px;
   margin: 0;
-  padding: 0;
+  padding: 0 0 8px 0;
   transition: background-color .5s;
   transform: translateY(-70px);
   border-radius: 24px;
@@ -64,32 +64,39 @@
 .team-menu__item.active {
   order: -5;
   min-height: 48px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   pointer-events: auto;
   opacity: 1;
 
 
   .team-menu__link {
+    line-height: 48px;
+    display: inline-block;
+    padding: 0 50px 0 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     //font-size: 24px;
     pointer-events: none;
     color: $text;
     background-color: #e2ebe9;
+
+    @include max(767) {
+      padding: 0 40px 0 16px;
+    }
   }
 }
 
 .team-menu__link {
   font-size: 20px;
   font-weight: 300;
-  line-height: 48px;
-  display: inline-block;
+  display: flex;
   overflow: hidden;
+  align-items: center;
   width: 100%;
-  padding: 0 50px 2px 24px;
+  padding: 5px 24px 5px 24px;
   user-select: none;
   transition: background-color .5s;
-  white-space: nowrap;
   text-decoration: none;
-  text-overflow: ellipsis;
   color: #1d1d1b;
   border-radius: 24px;
   background-color: transparent;
