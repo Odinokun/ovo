@@ -13,6 +13,7 @@ $(document).ready(function ($) {
     'team',
     'doc',
     'blog',
+    'article',
   ]);
 });
 
