@@ -1,0 +1,74 @@
+extends ../_template
+
+block variables
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/header-mob
+    include ../sections/underheader
+
+    //begin content
+    main.main.doc
+      include ../sections/page-top-pic--team
+      include ../sections/back-to-team
+      .container
+        //begin doc__person
+        .doc__person.doc-person
+          .doc-person__ava
+            img(src="assets/img/team-01.jpg" alt="ava")
+          .doc-person__descr
+            .doc-person__name.title-40 Семчишин Роксолана Олександрівна
+            .doc-person__position.title-24 Репродуктолог, завідувач клініки OVO life, мама двох хлопців
+        //end doc__person
+          
+        //begin doc__info
+        .doc__info.doc-info
+          .doc-info__icon.doc-info__icon--experience
+            +svg('experience')
+          .doc-info__descr
+            .doc-info__title.title-32 Досвід роботи
+            ul.doc-info__list
+              li.doc-info__item <strong>10 + років досвіду роботи в репродуктології</strong>
+              li.doc-info__item <strong>50 + міжнародних тренінгів та навчань</strong>
+              li.doc-info__item Магістр кафедри акушерства та гінекології
+              li.doc-info__item Кандидат медичних наук
+        //end doc__info
+
+        //begin doc__info
+        .doc__info.doc-info
+          .doc-info__icon.doc-info__icon--specialty
+            +svg('specialty')
+          .doc-info__descr
+            .doc-info__title.title-32 Спеціальність
+            ul.doc-info__list
+              li.doc-info__item <strong>Репродуктолог</strong>
+              li.doc-info__item <strong>Акушер-гінеколог</strong>
+              li.doc-info__item <strong>УЗ діагностика</strong>
+              li.doc-info__item Лікар ультразвукової діагностики
+              li.doc-info__item Завідувач відділення допоміжних репродуктивних технологій
+        //end doc__info
+
+        //begin doc__info
+        .doc__info.doc-info
+          .doc-info__icon.doc-info__icon--services
+            +svg('services')
+          .doc-info__descr
+            .doc-info__title.title-32 Послуги
+            ul.doc-info__list
+              li.doc-info__item <a href='#'>Консультація репродуктолога</a>
+              li.doc-info__item Онлайн консультація репродуктолога
+              li.doc-info__item <a href='#'>Інтерпретація результатів діагностики</a>
+              li.doc-info__item <a href='#'>Моніторинг овуляції в природньому циклі</a>
+              li.doc-info__item <a href='#'>УЗД матки та придатків</a>
+              li.doc-info__item <a href='#'>Ехосальпінгографія</a>
+              li.doc-info__item <a href='#'>Індукція суперовуляції та моніторингу індукованого циклу</a>
+              li.doc-info__item <a href='#'>Пункція фолікулів та аспірація ооцитів в протоколі з накопиченням ембріонів</a>
+              li.doc-info__item ВМІ спермою чоловіка
+              li.doc-info__item Запліднення IFV
+              li.doc-info__item Перенос ембріонів в порожнину матки
+        //end doc__info
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

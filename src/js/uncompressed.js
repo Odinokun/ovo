@@ -11,6 +11,7 @@ $(document).ready(function ($) {
     'search',
     'about',
     'team',
+    'doc',
   ]);
 });
 

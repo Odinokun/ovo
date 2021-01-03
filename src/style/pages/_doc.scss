@@ -1,0 +1,149 @@
+.doc-person {
+  display: flex;
+  align-items: center;
+  margin: 32px 0 68px 0;
+  padding: 32px;
+  border-radius: 200px;
+  background-color: #f2f6f4;
+
+  @include max(680) {
+    flex-direction: column;
+    width: calc(100% + 32px);
+    margin: 16px 0 48px -16px;
+    padding: 24px 16px;
+    border-radius: 0;
+  }
+}
+
+.doc-person__ava {
+  overflow: hidden;
+  flex: none;
+  width: 100%;
+  max-width: 352px;
+  margin-right: 64px;
+  border-radius: 50%;
+
+  @include max(1023) {
+    max-width: 256px;
+    margin-right: 32px;
+  }
+  @include max(680) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.doc-person__descr {
+  max-width: 576px;
+}
+
+.doc-person__name {
+  margin-bottom: 24px;
+
+  @include max(680) {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+}
+
+.doc-person__position {
+  @include max(680) {
+    text-align: center;
+  }
+}
+
+//begin #INFO
+.doc-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 32px;
+
+  @include max(680) {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.doc-info__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 352px;
+  margin-right: 64px;
+
+  @include max(1023) {
+    max-width: 250px;
+    margin-right: 32px;
+  }
+  @include max(680) {
+    margin: 0 auto 24px;
+  }
+
+  svg {
+    stroke: $text;
+  }
+}
+
+.doc-info__icon--experience svg {
+  width: 130px;
+  height: 116px;
+}
+
+.doc-info__icon--specialty svg {
+  width: 176px;
+  height: 130px;
+  transform: translateX(30px);
+
+  @include max(680) {
+    transform: translateX(15px);
+  }
+}
+
+.doc-info__icon--services svg {
+  width: 126px;
+  height: 195px;
+}
+
+.doc-info__descr {
+  @include max(680) {
+    width: 100%;
+  }
+}
+
+.doc-info__title {
+  @include max(680) {
+    text-align: center;
+  }
+}
+
+.doc-info__list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @include max(680) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+}
+
+.doc-info__item {
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 13px;
+  list-style: none;
+  color: #000;
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+//end #INFO

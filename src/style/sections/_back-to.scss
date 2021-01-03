@@ -1,0 +1,56 @@
+.back-to {
+  display: flex;
+  align-items: center;
+  min-height: 92px;
+  padding: 22px 0;
+  background-color: #f5f8f7;
+
+  @include max(680) {
+    min-height: 56px;
+    padding: 18px 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.back-to__link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover {
+    svg {
+      fill: $brand;
+    }
+
+    .back-to__text {
+      color: $brand;
+    }
+  }
+
+  svg {
+    flex: none;
+    fill: #1d1d1d;
+    width: 16px;
+    height: 26px;
+    margin-right: 24px;
+    transition: fill .5s;
+  }
+}
+
+.back-to__text {
+  line-height: 1;
+  transition: color .5s;
+  white-space: nowrap;
+  color: #000;
+
+  @include responsive-font(24, 16);
+
+  strong {
+    font-weight: 600;
+  }
+}

@@ -240,6 +240,7 @@
   position: relative;
   min-width: 64px;
   height: 48px;
+  z-index: 1;
 
   &:hover {
     .header-langs__list {
@@ -255,7 +256,7 @@
       }
 
       &:hover {
-        background-color: rgba(0, 76, 69, .18);
+        background-color: #D9E4E1;
       }
     }
   }
