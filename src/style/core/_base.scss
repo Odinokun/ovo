@@ -149,6 +149,23 @@ svg {
   flex-grow: 1;
 }
 
+.main-double {
+  padding-top: 32px;
+
+  .container {
+    display: flex;
+
+    @include max(900) {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+}
+
+.main-double__body {
+  width: 100%;
+}
+
 .container {
   position: relative;
   width: 100%;

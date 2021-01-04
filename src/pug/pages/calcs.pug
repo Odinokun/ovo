@@ -1,0 +1,50 @@
+extends ../_template
+
+block variables
+  - var pageTitle = "Репродуктивне здоров'я"
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/header-mob
+    include ../sections/underheader
+
+    //begin content
+    main.main
+      include ../sections/page-top-pic
+      include ../sections/page-title
+
+      //begin main-double
+      .main__double.main-double
+        .container
+          //begin main-double__body
+          .main-double__body.calcs
+            h2.main-double__title.title-40 Калькулятори
+
+            //begin calcs__list
+            ul.calcs__list.calcs-list
+              li.calcs-list__item
+                a(href="#").calcs-list__link
+                  .calcs-list__icon
+                    +svg('calcs-01')
+                  .calcs-list__title Овуляція
+              li.calcs-list__item
+                a(href="#").calcs-list__link
+                  .calcs-list__icon
+                    +svg('calcs-02')
+                  .calcs-list__title Чи вже час до репродуктолога?
+              li.calcs-list__item
+                a(href="#").calcs-list__link
+                  .calcs-list__icon
+                    +svg('calcs-03')
+                  .calcs-list__title Попередня дата пологів
+            //end calcs__list
+          //end main-double__body
+
+          include ../sections/aside
+      //end main-double
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

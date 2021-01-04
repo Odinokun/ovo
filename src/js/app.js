@@ -18,6 +18,9 @@ $(function() {
   // begin team filter
   require('./modules/teamFilter')();
 
+  // begin aside menu
+  require('./modules/asideMenu')();
+
   // begin phone mask
   // require('./modules/maskedinput')();
 
