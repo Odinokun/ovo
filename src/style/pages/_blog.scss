@@ -14,7 +14,13 @@
     right: 16px;
   }
   @include max(680) {
-    transform: translateY(-54px);
+    transform: translateY(-52px);
+  }
+  @include max(540) {
+    transform: translateY(-50px);
+  }
+  @include max(425) {
+    transform: translateY(-48px);
   }
 }
 

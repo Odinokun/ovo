@@ -1,0 +1,64 @@
+.therapy__section {
+  margin-bottom: 44px;
+}
+
+.therapy-price {
+  display: flex;
+  align-items: center;
+  margin-top: -8px;
+
+  @include max(1023) {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+.therapy-price__text {
+  font-weight: 300;
+  line-height: .83;
+  margin-right: 40px;
+  white-space: nowrap;
+  color: #1d1d1b;
+
+  @include responsive-font(48, 32);
+  @include max(1023) {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.therapy-price__numb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  width: 240px;
+  height: 120px;
+  background-image: url('../img/therapy.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+
+  @include max(680) {
+    width: 200px;
+    height: 100px;
+  }
+}
+
+.therapy-price__numb-lg,
+.therapy-price__numb-sm {
+  line-height: .83;
+  text-align: center;
+  color: #fff;
+}
+
+.therapy-price__numb-lg {
+  font-weight: 600;
+
+  @include responsive-font(48, 40);
+}
+
+.therapy-price__numb-sm {
+  font-size: 16px;
+  font-weight: 300;
+}

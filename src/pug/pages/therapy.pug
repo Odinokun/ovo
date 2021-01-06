@@ -1,0 +1,59 @@
+extends ../_template
+
+block variables
+  - var pageTitle = "Лікування"
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/header-mob
+    include ../sections/underheader
+
+    //begin content
+    main.main
+      include ../sections/page-top-pic
+      include ../sections/page-title
+
+      //begin main-double
+      .main__double.main-double
+        .container
+          //begin main-double__body
+          .main-double__body.therapy
+            h2.title-40 Первинна консультація репродуктолога
+
+            .therapy__section
+              p Якщо у вас виникли труднощі на шляху до батьківства, запрошуємо на консультацію до лікаря-репродуктолога. Його завдання на першій зустрічі – призначити обстеження, яке допоможе виявити причину безпліддя.
+
+            .therapy__section
+              h3.title-32 Як підготуватися?
+              ol.ol-list
+                li Завітайте до клініки удвох із партнером
+                li Візьміть із собою наявні медичні документи
+
+            .therapy__section
+              h3.title-32 Як проходить?
+              ul.ul-list
+                li На першій консультації лікар ставить запитання, а ви відповідаєте на них. Тут варто бути максимально відвертими та не приховувати деталі
+                li Репродуктолог призначає аналізи, дослідження та консультації інших спеціалістів, щоб поставити точний діагноз і призначити ефективне лікування
+
+            .therapy__section
+              h3.title-32 Що входить?
+              ul.ul-list-2
+                li Детальна розмова з репродуктологом
+                li Створення плану обстеження пари
+
+            .therapy__section
+              .therapy__price.therapy-price
+                .therapy-price__text Ціна послуги
+                .therapy-price__numb
+                  span.therapy-price__numb-lg 550
+                  span.therapy-price__numb-sm грн
+          //end main-double__body
+
+          include ../sections/aside-2
+      //end main-double
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
