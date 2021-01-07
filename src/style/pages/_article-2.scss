@@ -1,0 +1,25 @@
+.article-2 {
+  padding-bottom: 32px;
+
+  .ul-list li {
+    margin-bottom: 13px;
+  }
+
+  .article-item__pic {
+    height: 240px;
+  }
+
+  .article-steps {
+    padding-top: 8px;
+  }
+
+  .article-step__descr {
+    padding-top: 6px;
+  }
+}
+
+.article-2__title {
+  @include max(900) {
+    padding-top: 16px;
+  }
+}

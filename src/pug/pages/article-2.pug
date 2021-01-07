@@ -1,0 +1,89 @@
+extends ../_template
+
+block variables
+  - var pageTitle = "Репродуктивне здоров'я"
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/header-mob
+    include ../sections/underheader
+
+    //begin content
+    main.main
+      include ../sections/page-top-pic
+      include ../sections/page-title
+
+      //begin main-double
+      .main__double.main-double
+        .container
+          //begin main-double__body
+          .main-double__body.article-2
+            .article-item__section
+              h2.title-40.article-2__title Репродуктивне здоров'я
+              p Репродуктивне здоров’я. Два слова, від яких залежить так багато у нашому житті. Цим терміном позначають здатність зачати та народити здорову дитину. Нажаль, не кожен з нас має таку можливість. Причини можуть бути дуже різні – від звичайного стресу до складних генетичних патологій. На репродуктивне здоров’я впливає:
+              ul.ul-list
+                li спосіб життя
+                li наявність різних захворювань
+                li спадковість
+                li екологія
+                li шкідливі звички
+                li багато інших факторів, іноді дуже неочікуваних
+
+            .article-item__section
+              h3.title-32 Сучасні технології, які рятують репродуктивне здоров’я
+              .article-item__pic
+                img(src="assets/img/article-01.jpg" alt="picture")
+              p Реальність сувора: близько 20% пар в Україні та світі не можуть стати батьками за станом репродуктивного здоров’я. Але сьогодні безпліддя – це не вирок, переважну більшість проблем можна вирішити допоміжними репродуктивними технологіями. Далі про те, як це працює.
+
+            //begin article-item__steps
+            .article-item__steps.article-steps
+              //begin article-step
+              .article-steps__step.article-step
+                .article-step__numb Крок 1
+                .article-step__descr
+                  .title-32 Разом із партнером ідемо до лікаря
+                  p Завдання перше – пройти діагностику та визначити, через кого пара є безплідною. Це може бути як жінка, так і чоловік. А в деяких випадках причина криється в несумісності партнерів, навіть якщо кожен з них не має проблем зі здоров’ям. Тому на перший прийом до лікаря – тільки разом.
+              //end article-step
+
+              //begin article-step
+              .article-steps__step.article-step
+                .article-step__numb Крок 2
+                .article-step__descr
+                  h3.title-32 Отримуємо точний діагноз та план дій
+                  p Призвести до безпліддя може якесь захворювання або вроджена особливість, про яку ви навіть не здогадувалися. Тому будьте готові, що доведеться перевіритися по різних напрямках. Спеціаліст робить свою справу:
+                  ul.ul-list
+                    li призначає відповідні аналізи та дослідження
+                    li ставить точний діагноз
+                    li формує план лікування
+                  p Цей етап може бути не дуже швидким, але трішечки терпіння – і чіткий рецепт «як стати батьками» буде у ваших руках.
+              //end article-step
+
+              //begin article-step
+              .article-steps__step.article-step
+                .article-step__numb Крок 3
+                .article-step__descr
+                  h3.title-32 Діємо за планом
+                  p Далі ви крок за кроком рухаєтеся до своєї мрії:
+                  ul.ul-list
+                    li відвідуєте клініку
+                    li проходите необхідні процедури
+                    li уважно слухаєте лікарів
+              //end article-step
+            //end article-item__steps
+
+            .article-item__section
+              .article-item__pic
+                img(src="assets/img/article-01.jpg" alt="picture")
+              p У кожної пари свій шлях – хтось стає батьками після екстракорпорального запліднення, комусь показано донорство яйцеклітин або інша технологія з десятків існуючих. Головне, щоб цим процесом керували професіонали.
+              p Сучасна медицина дуже розвинена в напрямку репродуктивних технологій. Шанс дається майже кожному, треба тільки вчасно скористатися наданими можливостями.
+              p Так, буде непросто. Але мільйони пар пройшли через це та вже сьогодні обіймають своїх діточок. А воно того варте.
+          //end main-double__body
+
+          include ../sections/aside
+      //end main-double
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

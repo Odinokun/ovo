@@ -14,6 +14,7 @@ $(document).ready(function ($) {
     'doc',
     'blog',
     'article',
+    'article-2',
     'calcs',
     'therapy',
   ]);
