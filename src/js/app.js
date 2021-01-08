@@ -21,8 +21,8 @@ $(function() {
   // begin aside menu
   require('./modules/asideMenu')();
 
-  // begin phone mask
-  // require('./modules/maskedinput')();
+  // begin faq accordion
+  require('./modules/faq')();
 
   // begin Scroll2Ancor
   // require('./modules/scroll2ancor')();

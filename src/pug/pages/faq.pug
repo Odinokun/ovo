@@ -1,0 +1,51 @@
+extends ../_template
+
+mixin faq__row(answer)
+  .faq__row
+    .faq__question
+      span #{answer}
+      .faq__question-btn
+        +svg('arr-down')
+    .faq__answer
+      span Перше, що ми радимо зробити – прийти на консультацію до репродуктолога, бажано разом із партнером. Візьміть із собою наявні медичні документи, що стосуються планування вагітності – результати обстежень, які ви проходили впродовж останніх 5 років.
+
+
+block variables
+  - var pageTitle = "Репродуктивне здоров'я"
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/header-mob
+    include ../sections/underheader
+
+    //begin content
+    main.main
+      include ../sections/page-top-pic
+      include ../sections/page-title
+
+      //begin main-double
+      .main__double.main-double
+        .container
+          //begin main-double__body
+          .main-double__body.faq
+            h2.title-40.article-2__title Питання - Відповіді
+            
+            //begin faq
+            .faq-accordion
+              +faq__row('Я не можу завагітніти – з чого почати?')
+              +faq__row('Чи не провокує зайву вагу гормональна терапія при IVF?')
+              +faq__row('Я  не хочу, що б хтось дізнався, що моя дитина народилась завдяки штучному заплідненню. Чи гарантуєте ви конфіденційність?')
+              +faq__row('Я не можу завагітніти – з чого почати?')
+              +faq__row('Чи не провокує зайву вагу гормональна терапія при IVF?')
+              +faq__row('Я  не хочу, що б хтось дізнався, що моя дитина народилась завдяки штучному заплідненню. Чи гарантуєте ви конфіденційність?')
+            //end faq
+          //end main-double__body
+
+          include ../sections/aside
+      //end main-double
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts
