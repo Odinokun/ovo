@@ -21,16 +21,11 @@ $(function() {
   // begin aside menu
   require('./modules/asideMenu')();
 
-  // begin faq accordion
+  // begin accordion
   require('./modules/faq')();
-
-  // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
+  require('./modules/price')();
 
   // begin Slick slider
   require('./modules/slick')();
-
-  // begin Popup
-  // require('./modules/popup')();
 
 });

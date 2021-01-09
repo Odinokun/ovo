@@ -1,0 +1,103 @@
+extends ../_template
+
+mixin price__row(pic, answer)
+  .price__row
+    .price__question.price-question
+      .price-question__pic
+        img(src="assets/img/price-" + pic + ".jpg" alt="picture")
+      h3.price-question__title.title-32 #{answer}
+      .price-question__cash грн
+      .price-question__btn
+        +svg('arr-down')
+    //begin price-answer
+    .price__answer.price-answer
+      //begin price-answer__section
+      .price-answer__section
+        .price-answer__row
+          .price-answer__text Первинна консультація репродуктолога
+          .price-answer__cash 550
+        .price-answer__row
+          .price-answer__text Доплерометричне обстеження судин функціональної системи:материнський організм, плацента двійні
+          .price-answer__cash 29 990
+        .price-answer__row
+          .price-answer__text Седація
+          .price-answer__cash 550
+        .price-answer__row
+          .price-answer__text УЗД грудних залоз
+          .price-answer__cash 29 990
+        .price-answer__row
+          .price-answer__text Запліднення IVF
+          .price-answer__cash 550
+        .price-answer__row
+          .price-answer__text Мазок на флору
+          .price-answer__cash 29 990
+        .price-answer__row
+          .price-answer__text Первинна консультація репродуктолога
+          .price-answer__cash 550
+      //end price-answer__section
+
+      //begin price-answer__section
+      .price-answer__section
+        .price-answer__row
+          .price-answer__text Седація
+          .price-answer__cash 550
+        .price-answer__row
+          .price-answer__text УЗД грудних залоз
+          .price-answer__cash 29 990
+        .price-answer__row
+          .price-answer__text Запліднення IVF
+          .price-answer__cash 550
+      //end price-answer__section
+
+      //begin price-answer__section
+      .price-answer__section
+        .price-answer__row
+          .price-answer__text Запліднення IVF
+          .price-answer__cash 550
+        .price-answer__row
+          .price-answer__text Мазок на флору
+          .price-answer__cash 29 990
+        .price-answer__row
+          .price-answer__text Первинна консультація репродуктолога
+          .price-answer__cash 550
+      //end price-answer__section
+    //end price-answer
+
+block variables
+  - var pageTitle = "Ціни"
+
+block content
+  .main-wrap.no-js
+    include ../sections/header
+    include ../sections/header-mob
+    include ../sections/underheader
+
+    //begin content
+    main.main.price
+      include ../sections/page-top-pic
+      include ../sections/page-title
+
+      .container
+        //begin blog__switcher
+        .blog__switcher.blog-switcher
+          label.blog-switcher__btn
+            input(type='checkbox' checked)
+            span Діагностика
+          label.blog-switcher__btn
+            input(type='checkbox')
+            span Лікуванння
+        //end blog__switcher
+
+        //begin price
+        .price-accordion
+          +price__row('01', 'Безпліддя')
+          +price__row('02', "Жіноче здоров'я")
+          +price__row('03', "Чоловіче здоров'я")
+          +price__row('04', 'Вагітність')
+        //end price
+
+
+    //end content
+
+    include ../sections/footer
+    include ../sections/scripts

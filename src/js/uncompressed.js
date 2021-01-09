@@ -18,6 +18,7 @@ $(document).ready(function ($) {
     'calcs',
     'therapy',
     'faq',
+    'price',
   ]);
 });
 
