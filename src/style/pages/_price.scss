@@ -1,6 +1,25 @@
+.price {
+  .blog-switcher {
+    @include max(540) {
+      position: relative;
+      justify-content: center;
+      margin-top: 16px;
+      transform: translateY(0);
+    }
+  }
+}
+
 .price-accordion {
   padding-top: 32px;
 
+  @include max(900) {
+    width: calc(100% + 64px);
+    margin-left: -32px;
+  }
+  @include max(768) {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+  }
   @include max(680) {
     padding-top: 16px;
   }
@@ -8,6 +27,13 @@
 
 .price__row {
   margin-bottom: 24px;
+
+  @include max(900) {
+    margin-bottom: 16px;
+  }
+  @include max(576) {
+    margin-bottom: 8px;
+  }
 }
 
 //begin #QUESTION
@@ -19,6 +45,11 @@
   transition: .5s;
   border-radius: 350px;
   background-color: #f2f6f4;
+
+  @include max(900) {
+    padding: 16px 16px 16px 16px;
+    border-radius: 0;
+  }
 
   &:hover {
     background-color: #ebf2ee;
@@ -40,6 +71,24 @@
   height: 112px;
   margin-right: 24px;
   border-radius: 50%;
+
+  @include max(900) {
+    width: 90px;
+    height: 90px;
+    margin-right: 16px;
+  }
+  @include max(576) {
+    width: 70px;
+    height: 70px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 }
 
 .price-question__title {
@@ -50,16 +99,27 @@
   padding-right: 16px;
   user-select: none;
   color: #1d1d1b;
+
+  @include max(374) {
+    font-size: 20px;
+  }
 }
 
 .price-question__cash {
-  font-size: 24px;
   font-weight: 600;
   line-height: 1;
   flex: none;
   width: 160px;
   padding-right: 16px;
   color: #1d1d1b;
+
+  @include responsive-font(24, 16);
+  @include max(1100) {
+    width: 100px;
+  }
+  @include max(576) {
+    width: 54px;
+  }
 }
 
 .price-question__btn {
@@ -69,6 +129,11 @@
     flex: none;
     width: 24px;
     height: 16px;
+
+    @include max(576) {
+      width: 16px;
+      height: 10px;
+    }
   }
 }
 
@@ -80,10 +145,21 @@
   width: 100%;
   max-width: 930px;
   margin: 0 auto;
+
+  @include max(1230) {
+    max-width: 100%;
+  }
 }
 
 .price-answer__section {
   margin-bottom: 24px;
+
+  @include max(900) {
+    margin-bottom: 16px;
+  }
+  @include max(576) {
+    margin-bottom: 8px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -95,6 +171,19 @@
   align-items: center;
   padding: 24px 24px 24px 64px;
   border-radius: 35px;
+
+  @include max(1230) {
+    padding: 24px 120px 24px 160px;
+  }
+  @include max(1100) {
+    padding: 24px 60px 24px 160px;
+  }
+  @include max(900) {
+    padding: 16px 4px 16px 16px;
+  }
+  @include max(576) {
+    padding: 8px 4px 8px 16px;
+  }
 
   &:nth-child(even) {
     background-color: #fafbfb;
@@ -121,6 +210,9 @@
   color: #1d1d1b;
 
   @include responsive-font(24, 16);
+  @include max(576) {
+    width: 82px;
+  }
 }
 
 //end #ANSWER
