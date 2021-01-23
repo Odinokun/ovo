@@ -30,7 +30,8 @@
 .therapy-price__numb {
   display: flex;
   justify-content: center;
-  align-items: center;
+  //align-items: center;
+  align-items: baseline;
   flex: none;
   width: 240px;
   height: 120px;
@@ -47,9 +48,14 @@
 
 .therapy-price__numb-lg,
 .therapy-price__numb-sm {
-  line-height: .83;
+  line-height: 120px;
   text-align: center;
   color: #fff;
+
+  @include max(680) {
+    line-height: 100px;
+  }
+;
 }
 
 .therapy-price__numb-lg {
@@ -61,4 +67,5 @@
 .therapy-price__numb-sm {
   font-size: 16px;
   font-weight: 300;
+  margin-left: 8px;
 }

@@ -93,7 +93,7 @@
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  max-width: 305px;
+  max-width: 315px;
   height: 48px;
   padding-right: 60px;
 }
@@ -128,11 +128,12 @@
 .header-user {
   display: flex;
   align-items: center;
-  margin-left: 15px;
-  transition: opacity .5s;
+  margin-left: 3px;
+  padding: 15px 12px;
+  transition: .5s;
 
   &:hover {
-    opacity: .9;
+    background-color: #0a534c;
   }
 
   svg {
@@ -179,8 +180,9 @@
   height: 48px;
   padding: 5px 50px 5px 15px;
   color: #fff;
-  border: none;
-  background-color: #2f7380;
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: #296963;
 
   @include placeholder-color(rgba(255, 255, 255, .5));
 }
@@ -195,9 +197,15 @@
   width: 48px;
   height: 48px;
   cursor: pointer;
+  transition: .5s;
   border: none;
-  background-color: transparent;
   box-shadow: none;
+  background-color: #296963;
+
+
+  &:hover {
+    background-color: #0a534c;
+  }
 
   svg {
     fill: #fff;
@@ -219,7 +227,11 @@
   width: 48px;
   height: 48px;
   cursor: pointer;
-  transition: opacity .5s;
+  transition: .5s;
+
+  &:hover {
+    background-color: #0a534c;
+  }
 
   svg {
     fill: #fff;
@@ -238,9 +250,9 @@
 //begin #LANG
 .header-langs {
   position: relative;
+  z-index: 1;
   min-width: 64px;
   height: 48px;
-  z-index: 1;
 
   &:hover {
     .header-langs__list {
@@ -256,7 +268,7 @@
       }
 
       &:hover {
-        background-color: #D9E4E1;
+        background-color: #d9e4e1;
       }
     }
   }

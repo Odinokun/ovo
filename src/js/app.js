@@ -28,4 +28,7 @@ $(function() {
   // begin Slick slider
   require('./modules/slick')();
 
+  // begin tabs
+  require('./modules/tabs')();
+
 });

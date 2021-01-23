@@ -53,17 +53,21 @@
     font-weight: 300;
     line-height: 1.65;
     display: inline;
-    padding: 0 0 5px 0;
+    padding: 0 32px 3px 32px;
     transition: color .5s;
     color: #1d1d1b;
     background-color: #fff;
-    box-shadow: -32px 0 0 #fff, 32px 0 0 #fff;
+    box-decoration-break: clone;
+    //box-shadow: -32px 0 0 #fff, 32px 0 0 #fff;
 
+    -webkit-box-decoration-break: clone;
     @include responsive-font(56, 24);
     @include max(1024) {
+      padding: 0 16px 3px 16px;
       box-shadow: -16px 0 0 #fff, 16px 0 0 #fff;
     }
     @include max(768) {
+      padding: 0 8px 3px 8px;
       box-shadow: -8px 0 0 #fff, 8px 0 0 #fff;
     }
   }

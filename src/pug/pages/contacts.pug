@@ -26,21 +26,21 @@ block content
           //begin contacts-body__right
           .contacts-body__right
             //begin contacts-body__link
-            a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").contacts-body__link
+            .contacts-body__link
               .contacts-body__link-icon.contacts-body__link-icon--map
                 +svg('marker')
               .contacts-body__link-text
                 .contacts-body__link-text-sm Адреса
-                .contacts-body__link-text-lg м. Львів , пр. Червоної Калини, 60, Avalon Up
+                a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").contacts-body__link-text-lg м. Львів , пр. Червоної Калини, 60, Avalon Up
             //end contacts-body__link
 
             //begin contacts-body__link
-            a(href="tel:+380971621688").contacts-body__link
+            .contacts-body__link
               .contacts-body__link-icon.contacts-body__link-icon--phone
                 +svg('smart')
               .contacts-body__link-text
                 .contacts-body__link-text-sm Телефон
-                .contacts-body__link-text-lg 097 162 16 88
+                a(href="tel:+380971621688").contacts-body__link-text-lg 097 162 16 88
             //end contacts-body__link
 
             //begin contacts-body__link
@@ -54,12 +54,12 @@ block content
             //end contacts-body__link
 
             //begin contacts-body__link
-            a(href="mailto:info@ovolifeclinic.com").contacts-body__link
+            .contacts-body__link
               .contacts-body__link-icon
                 +svg('mail')
               .contacts-body__link-text
                 .contacts-body__link-text-sm Електронна пошта
-                .contacts-body__link-text-lg info@ovolifeclinic.com
+                a(href="mailto:info@ovolifeclinic.com").contacts-body__link-text-lg info@ovolifeclinic.com
             //end contacts-body__link
 
             //begin contacts-body__socials

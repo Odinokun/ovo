@@ -12,6 +12,7 @@
   padding: 0 0 8px 0;
   transition: background-color .5s;
   transform: translateY(-70px);
+  pointer-events: none;
   border-radius: 24px;
   background-color: transparent;
 
@@ -75,7 +76,6 @@
     padding: 0 50px 0 24px;
     white-space: nowrap;
     text-overflow: ellipsis;
-    //font-size: 24px;
     pointer-events: none;
     color: $text;
     background-color: #e2ebe9;
@@ -153,16 +153,6 @@
   width: 100%;
   text-align: center;
   text-decoration: none;
-
-  &:hover {
-    .team-list__name {
-      color: #004c45;
-    }
-
-    .team-list__position {
-      color: #8aaca9;
-    }
-  }
 }
 
 .team-list__ava {
@@ -179,17 +169,29 @@
 }
 
 .team-list__name {
+  display: block;
   margin-bottom: 10px;
   transition: color .5s;
+  text-decoration: none;
+
+  &:hover {
+    color: #004c45;
+  }
 }
 
 .team-list__position {
   font-size: 16px;
   font-weight: 300;
   line-height: 1.5;
+  display: block;
   transition: color .5s;
   text-align: center;
+  text-decoration: none;
   color: #aaa;
+
+  &:hover {
+    color: #8aaca9;
+  }
 }
 
 //end #DOCTORS

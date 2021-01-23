@@ -11,6 +11,12 @@
   width: calc(50% - 16px);
   margin-bottom: 32px;
   list-style: none;
+  &:first-child{
+    svg {
+
+    stroke: transparent;
+    }
+  }
 
   @include max(1023) {
     width: calc(50% - 8px);
@@ -62,7 +68,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 50px;
   user-select: none;
   text-align: center;
   color: #000;

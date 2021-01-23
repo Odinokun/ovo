@@ -40,6 +40,9 @@
 }
 
 .about-top__clinic-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: calc(33.33% - 16px);
   margin-bottom: 24px;
   text-decoration: none;
@@ -53,9 +56,11 @@
 }
 
 .about-top__clinic-logo {
-  width: 100%;
+  display: block;
+  overflow: hidden;
   min-height: 250px;
   margin-bottom: 32px;
+  border-radius: 50%;
 
   img {
     display: block;
@@ -65,14 +70,17 @@
 }
 
 .about-top__clinic-title {
-  margin-bottom: 3px;
+  margin-bottom: 0;
   text-align: center;
+  padding-bottom: 3px;
+  text-decoration: none;
 }
 
 .about-top__clinic-subtitle {
   min-height: 66px;
   margin-bottom: 20px;
   text-align: center;
+  text-decoration: none;
 
   @include max(900) {
     min-height: 0;
@@ -261,11 +269,11 @@
 
   .first-visit__link {
     &:nth-child(2) {
-      padding-right: 95px;
+      margin-right: 95px;
 
       @include max(900) {
         margin-bottom: 16px;
-        padding-right: 0;
+        margin-right: 0;
       }
     }
   }

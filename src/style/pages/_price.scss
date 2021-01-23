@@ -1,15 +1,97 @@
-.price {
-  .blog-switcher {
+//begin #SWITCHER
+.price-switcher {
+  position: absolute;
+  top: 0;
+  right: 48px;
+  display: flex;
+  align-items: center;
+  transform: translateY(-70px);
+
+  @include max(1024) {
+    right: 32px;
+  }
+  @include max(768) {
+    right: 16px;
+  }
+  @include max(680) {
+    position: static;
+    right: 0;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 16px;
+    //transform: translateY(-52px);
+    transform: translateY(0);
+  }
+  //@include max(540) {
+  //  transform: translateY(-50px);
+  //}
+  //@include max(425) {
+  //  transform: translateY(-48px);
+  //}
+}
+
+.price-switcher__btn {
+  position: relative;
+  display: block;
+  margin-left: 16px;
+  transition: .5s;
+
+  @include max(680) {
+    width: calc(50% - 8px);
+    margin-left: 0;
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
+  span {
+    font-size: 24px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 48px;
+    padding: 0 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: .5s;
+    color: #000;
+    border-radius: 24px;
+    background-color: #ebf1ef;
+
+    user-focus: none;
+    @include max(680) {
+      width: 100%;
+    }
     @include max(540) {
-      position: relative;
-      justify-content: center;
-      margin-top: 16px;
-      transform: translateY(0);
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: #e7eded;
     }
   }
 }
 
+.price-switcher__btn input:checked {
+  pointer-events: none;
+}
+
+.price-switcher__btn input:checked + span {
+  pointer-events: none;
+  color: #fff;
+  background-color: $brand;
+}
+
+//end #SWITCHER
+
 .price-accordion {
+  display: none;
   padding-top: 32px;
 
   @include max(900) {
@@ -22,6 +104,9 @@
   }
   @include max(680) {
     padding-top: 16px;
+  }
+  &.active {
+    display: block;
   }
 }
 
@@ -57,6 +142,9 @@
 
   &.active {
     background-color: #e5eee8;
+    .price-question__cash {
+      opacity: 1;
+    }
 
     .price-question__btn {
       transform: rotate(180deg);
@@ -111,6 +199,9 @@
   flex: none;
   width: 160px;
   padding-right: 16px;
+  transition: opacity .5s;
+  pointer-events: none;
+  opacity: 0;
   color: #1d1d1b;
 
   @include responsive-font(24, 16);

@@ -16,6 +16,7 @@
   }
   @include max(640) {
     padding: 24px 16px !important;
+    margin-bottom: 0;
   }
 
   &:nth-child(odd) {
@@ -29,7 +30,7 @@
     }
     @include max(640) {
       flex-direction: column;
-      border-radius: 48px 48px 48px 0;
+      border-radius: 50px 50px 50px 5px;
     }
 
     .review-item__ava {
@@ -55,7 +56,7 @@
     }
     @include max(640) {
       flex-direction: column;
-      border-radius: 48px 48px 0 48px;
+      border-radius: 50px 50px 5px 50px;
     }
 
     .review-item__ava {

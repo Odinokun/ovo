@@ -195,7 +195,7 @@ svg {
 
 .title-32 {
   line-height: 1.33;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   @include responsive-font(32, 24);
   @include max(680) {
@@ -218,7 +218,7 @@ svg {
     list-style: none;
 
     @include max(680) {
-      padding-left: 24px;
+      padding-left: 30px;
     }
 
     &::before {
@@ -249,7 +249,7 @@ svg {
     list-style: none;
 
     @include max(680) {
-      padding-left: 24px;
+      padding-left: 30px;
     }
 
     &::before {
@@ -287,7 +287,7 @@ svg {
     list-style: none;
 
     @include max(680) {
-      padding-left: 24px;
+      padding-left: 30px;
     }
 
     &::before {
@@ -297,6 +297,8 @@ svg {
       position: absolute;
       top: -5px;
       left: 30px;
+      min-width: 16px;
+      text-align: center;
       color: #adc9b8;
 
       @include max(680) {

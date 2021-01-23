@@ -3,12 +3,12 @@ extends ../_template
 mixin team-list__item(ava)
   //begin team-list__item
   li.team-list__item
-    a(href="#").team-list__link
-      .team-list__ava
+    .team-list__link
+      a(href="#").team-list__ava
         img(src="assets/img/team-" + ava + ".jpg" alt="doctor")
       .team-list__descr
-        .team-list__name.title-24 Семчишин Роксолана Олександрівна
-        .team-list__position Репродуктолог, завідувач клініки OVO life, мама двох хлопців
+        a(href="#").team-list__name.title-24 Семчишин Роксолана Олександрівна
+        a(href="#").team-list__position Репродуктолог, завідувач клініки OVO life, мама двох хлопців
   //end team-list__item
 
 block variables

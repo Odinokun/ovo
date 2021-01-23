@@ -78,20 +78,30 @@ block content
       include ../sections/page-title
 
       .container
-        //begin blog__switcher
-        .blog__switcher.blog-switcher
-          label.blog-switcher__btn
-            input(type='checkbox' checked)
+        //begin price__switcher
+        .price__switcher.price-switcher
+          label.price-switcher__btn
+            input(type='radio' name='price' value='01' checked)
             span Діагностика
-          label.blog-switcher__btn
-            input(type='checkbox')
+          label.price-switcher__btn
+            input(type='radio' name='price' value='02')
             span Лікуванння
-        //end blog__switcher
+        //end price__switcher
 
         //begin price
-        .price-accordion
+        .price-accordion.price-accordion--01.active
           +price__row('01', 'Безпліддя')
           +price__row('02', "Жіноче здоров'я")
+          +price__row('03', "Чоловіче здоров'я")
+          +price__row('04', 'Вагітність')
+        //end price
+
+        //begin price
+        .price-accordion.price-accordion--02
+          +price__row('04', 'Вагітність')
+          +price__row('03', "Чоловіче здоров'я")
+          +price__row('02', "Жіноче здоров'я")
+          +price__row('01', 'Безпліддя')
           +price__row('03', "Чоловіче здоров'я")
           +price__row('04', 'Вагітність')
         //end price

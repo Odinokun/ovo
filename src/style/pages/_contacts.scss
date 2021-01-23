@@ -32,6 +32,12 @@
   }
 }
 
+.contacts-body__right{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .contacts-body__link {
   display: flex;
   margin-bottom: 44px;
@@ -42,18 +48,7 @@
   }
 }
 
-a.contacts-body__link {
-  &:hover {
-    svg {
-      fill: $brand;
-    }
 
-    .contacts-body__link-text-lg {
-      text-decoration: underline;
-      color: $brand;
-    }
-  }
-}
 
 .contacts-body__link-icon {
   display: flex;
@@ -98,8 +93,13 @@ a.contacts-body__link {
   display: block;
   transition: color .5s;
   color: #1d1d1b;
-
+  text-decoration: none;
   @include responsive-font(24, 16);
+}
+a.contacts-body__link-text-lg:hover {
+      text-decoration: underline;
+      color: $brand;
+
 }
 
 .contacts-body__socials {
