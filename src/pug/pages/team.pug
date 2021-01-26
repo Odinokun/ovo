@@ -26,20 +26,27 @@ block content
       include ../sections/page-title
       .container
         //begin team__menu
-        ul.team__menu.team-menu
-          li.team-menu__item.active
-            a(href="#").team-menu__link Вся медична команда
-          li.team-menu__item
-            a(href="#").team-menu__link Репродуктолог
-          li.team-menu__item
-            a(href="#").team-menu__link Гінеколог
-          li.team-menu__item
-            a(href="#").team-menu__link Ембріолог
-          li.team-menu__item
-            a(href="#").team-menu__link Генетик
-          li.team-menu__item
-            a(href="#").team-menu__link Супровід пацієнта
+        nav.team__menu.team-menu
+          .team-menu__close
+            +svg('close')
+          ul.team-menu__list
+            li.team-menu__item.active
+              a(href="#").team-menu__link Вся медична команда
+            li.team-menu__item
+              a(href="#").team-menu__link Репродуктолог
+            li.team-menu__item
+              a(href="#").team-menu__link Гінеколог
+            li.team-menu__item
+              a(href="#").team-menu__link Ембріолог
+            li.team-menu__item
+              a(href="#").team-menu__link Генетик
+            li.team-menu__item
+              a(href="#").team-menu__link Супровід пацієнта
         //end team__menu
+
+        .team-menu__btn-wrap
+          a(href="#").team-menu__btn
+            span Вся медична команда
 
       .container
         //begin team__list

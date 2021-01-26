@@ -33,7 +33,6 @@
   overflow: auto;
   width: 100%;
   height: 100vh;
-  padding: 0 16px;
   transition: opacity .5s;
   pointer-events: none;
   opacity: 0;
@@ -54,10 +53,12 @@
 }
 
 .m-header__menu-inn {
+  display: block;
+  overflow: auto;
   width: 100%;
-  max-width: 320px;
+  height: auto;
   margin: 0 auto;
-  padding: 64px 0 32px 0;
+  padding: 80px 16px 32px 16px;
 
   @include max(425) {
     max-width: 100%;
@@ -65,6 +66,13 @@
 }
 
 //end #MENU
+.m-header__menu-item {
+  position: relative;
+  left: 50%;
+  width: 100%;
+  max-width: 320px;
+  transform: translateX(-50%);
+}
 
 //begin #MENU LIST
 .m-header-menu__list {

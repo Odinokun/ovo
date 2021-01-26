@@ -12,8 +12,7 @@
     .m-header__menu.m-header-menu#m-header__menu
       .m-header__menu-inn
         //begin m-header-menu__list
-        //begin m-header-menu__list
-        ul.m-header-menu__list
+        ul.m-header-menu__list.m-header__menu-item
           li.m-header-menu__item
             a(href="#").m-header-menu__link Про нас
           li.m-header-menu__item
@@ -33,13 +32,13 @@
         //end m-header-menu__list
 
         //begin m-header__user
-        .m-header__user.m-header-user
+        .m-header__user.m-header-user.m-header__menu-item
           +svg('user')
           span Моя медична карта
         //end m-header__user
 
         //begin m-header__contacts
-        .m-header__contacts.m-header-contacts
+        .m-header__contacts.m-header-contacts.m-header__menu-item
           a(href="https://goo.gl/maps/BTUT2QsmjXZBCCbF6" target="_blank" rel="nofollow noopener noreferrer").m-header-contacts__link.m-header-contacts__link--adress
             +svg('marker')
             span Як нас знайти
@@ -49,7 +48,7 @@
         //end m-header__contacts
 
         //begin m-header__langs
-        .m-header__langs.m-header-langs
+        .m-header__langs.m-header-langs.m-header__menu-item
           ul.m-header-langs__list
             li.m-header-langs__item.active
               a(href="#").m-header-langs__link Укр
@@ -60,7 +59,7 @@
         //end m-header__langs
 
         //begin m-header__socials
-        .m-header__socials.m-header-socials
+        .m-header__socials.m-header-socials.m-header__menu-item
           a(href="#" target="_blank" rel="nofollow noopener noreferrer").m-header-socials__link
             +svg('fb')
           a(href="#" target="_blank" rel="nofollow noopener noreferrer").m-header-socials__link
@@ -68,7 +67,7 @@
         //end m-header__socials
 
         //begin m-header__search
-        form.m-header__search.m-header-search
+        form.m-header__search.m-header-search.m-header__menu-item
           input(placeholder='Пошук').m-header-search__input
           button.m-header-search__btn
             +svg('search')

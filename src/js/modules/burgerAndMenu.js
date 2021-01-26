@@ -5,6 +5,8 @@ module.exports = function() {
     e.preventDefault();
     $(this).find(".burger__icon").toggleClass("active");
     $("#m-header__menu").toggleClass("active");
+
+    $('.main').toggleClass('no-scroll');
   });
   // end burger and mobile menu
 

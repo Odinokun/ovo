@@ -138,6 +138,10 @@ svg {
 
 .main {
   flex-grow: 1;
+  &.no-scroll{
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 .main-double {
